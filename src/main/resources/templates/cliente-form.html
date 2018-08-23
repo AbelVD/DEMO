@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/cliente/guardarCliente}" th:object="${cliente}" method="post">
+
+<label for="nombre">name</label>
+<input type="text" th:field="*{nombre}" />
+
+<label for="edad">edad</label>
+<input type="number" th:field="*{edad}"/>
+
+<input type="submit" />
+</form> 
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_demo?useSSL=false
+    username: postgres
+    password: 654321
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate: 
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        temp:
+          use_jdbc_metadata_defaults: false #https://vkuzel.com/spring-boot-jpa-hibernate-atomikos-postgresql-exception
+    open-in-view: true 
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug

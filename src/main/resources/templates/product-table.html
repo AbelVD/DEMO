@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NOMBRE</th>
+				<th>PRECIO</th>
+				<th>STOCK</th>
+				<th>CATEGORIA</th>
+				<th>OPCIONES</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			<tr th:each="producto: ${productolist}">
+				<td th:text="${producto.idproducto}"></td>
+				<td th:text="${producto.nombre}"></td>
+				<td th:text="${producto.precio}"></td>
+				<td th:text="${producto.stock}"></td>
+				<td th:text="${producto.categoria.nombre}"></td>
+				<td><a th:href="@{/producto/editarpro/}+${producto.idproducto}">EDITAR</a></td>
+
+
+			</tr>
+		</tbody>
+
+	</table>
+</body>
+</html>

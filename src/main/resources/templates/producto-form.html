@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/producto/guardarproducto}" th:object="${producto}" method="post">
+<input type="text" th:field="*{idproducto}"/>
+<label for="">nombre</label>
+<input type="text" th:field="*{nombre}"/>
+
+<label for="">precio</label>
+<input type="number" th:field="*{precio}"/>
+
+<label for="">stock</label>
+<input type="number" th:field="*{stock}" />
+
+<select name="" id="" th:field="*{categoria}">
+<option value="0">--seleccione--</option>
+<option th:each="categoria: ${categorialist}" th:value="${categoria.idcategoria}" th:text="${categoria.nombre}"></option>
+</select>
+<input type="submit" />
+</form>
+</body>
+</html>
