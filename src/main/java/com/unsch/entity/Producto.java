@@ -30,6 +30,9 @@ public class Producto implements Serializable {
 
 	@Column(name = "stock")
 	private int stock;
+	
+	@Column(name="condicion")
+	private boolean condicion;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Categoria categoria;
@@ -75,6 +78,14 @@ public class Producto implements Serializable {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	public boolean isCondicion() {
+		return condicion;
+	}
+
+	public void setCondicion(boolean condicion) {
+		this.condicion = condicion;
 	}
 
 	private static final long serialVersionUID = 1L;
