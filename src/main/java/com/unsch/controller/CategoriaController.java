@@ -48,7 +48,7 @@ public class CategoriaController {
 		return "categoria-table";
 		
 	}
-	
+	//EDITAR DESDE GIThub
 	@GetMapping("/editarcat/{idcategoria}")
 	public  String editarcat(@PathVariable(name="idcategoria")Long idcategoria, Map<String, Object>model) {
 		Categoria categoria=categoriaService.buscarcatporid(idcategoria);
